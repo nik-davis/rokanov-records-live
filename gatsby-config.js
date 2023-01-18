@@ -4,7 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: `Rokanov Records Live`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://rokanovrecordslive.uk`,
+    description: `Rokanov Records Live and Nik Davis Zero`
   },
   plugins: [
     "gatsby-plugin-image",
