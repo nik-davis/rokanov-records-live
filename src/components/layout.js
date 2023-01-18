@@ -45,6 +45,18 @@ const Layout = ({ pageTitle, children }) => {
               About
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <a href="https://www.instagram.com/rokanovrecordslive/">Insta</a>
+          </li>
+          <li className={navLinkItem}>
+            <a href="https://twitter.com/RokanovRecordsL">Twitter</a>
+          </li>
+          <li className={navLinkItem}>
+            <a href="https://www.facebook.com/RokanovRecordsLive/">Facebook</a>
+          </li>
+          <li className={navLinkItem}>
+            <a href="mailto:nik@rokanovrecordslive.uk">e-mail</a>
+          </li>
         </ul>
       </nav>
       <main>
