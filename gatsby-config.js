@@ -6,5 +6,8 @@ module.exports = {
     title: `Rokanov Records Live`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
 }
