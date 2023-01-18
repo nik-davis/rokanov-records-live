@@ -5,7 +5,8 @@ import Seo from '../components/seo'
 const AboutPage = () => {
   return (
     <Layout pageTitle="About">
-      <p>About us. Blah blah blah.</p>
+      <p>0 cost, 0 hours, 0 expectations. That’s the Roka Code 🏴‍☠️</p>
+      <p>Established 2016 🇪🇺 Dissolved 2017 💔 Revived 2022 🤘♥️🎶</p>
     </Layout>
   )
 }
