@@ -1,12 +1,20 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+
 import {
   container,
   heading,
   navLinks,
   navLinkItem,
   navLinkText,
-  siteTitle
+  siteTitle,
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
@@ -22,7 +30,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header> 
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -46,16 +54,24 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <a href="https://www.instagram.com/rokanovrecordslive/">Insta</a>
+            <a href="https://www.instagram.com/rokanovrecordslive/">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
           </li>
           <li className={navLinkItem}>
-            <a href="https://twitter.com/RokanovRecordsL">Twitter</a>
+            <a href="https://twitter.com/RokanovRecordsL">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
           </li>
           <li className={navLinkItem}>
-            <a href="https://www.facebook.com/RokanovRecordsLive/">Facebook</a>
+            <a href="https://www.facebook.com/RokanovRecordsLive/">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
           </li>
           <li className={navLinkItem}>
-            <a href="mailto:nik@rokanovrecordslive.uk">e-mail</a>
+            <a href="mailto:nik@rokanovrecordslive.uk">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
           </li>
         </ul>
       </nav>
