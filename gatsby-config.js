@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Rokanov Records Live`,
     siteUrl: `https://rokanovrecordslive.uk`,
-    description: `Rokanov Records Live and Nik Davis Zero`
+    description: `Rokanov Records Live and Nik Davis Zero`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -15,7 +15,8 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
-      }
+      },
     },
+    "gatsby-plugin-mdx",
   ],
-}
+};
