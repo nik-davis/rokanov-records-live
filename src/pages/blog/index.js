@@ -1,11 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Layout from "../../components/layout";
+import Seo from "../../components/seo";
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="Blog">
+    <Layout pageTitle="My Blogs Index">
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <h2>{node.frontmatter.title}</h2>
@@ -23,7 +23,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          date(formatString: "MMM DD, YYYY")
+          date(formatString: "MMMM DD, YYYY")
         }
         id
         excerpt
@@ -32,6 +32,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Blogs" />;
+export const Head = () => <Seo title="My Blogs Index" />;
 
 export default BlogPage;
