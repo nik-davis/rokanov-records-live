@@ -1,15 +1,30 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
-const BlogPage = () => {
+const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blogs">
-      <p>Blog posts tbcba</p>
+      <ul>
+        {data.allFile.nodes.map((node) => (
+          <li key={node.name}>{node.name}</li>
+        ))}
+      </ul>
     </Layout>
-  )
-}
+  );
+};
 
-export const Head = () => <Seo title="Blogs" />
+export const query = graphql`
+  query {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }
+`;
 
-export default BlogPage
+export const Head = () => <Seo title="Blogs" />;
+
+export default BlogPage;
