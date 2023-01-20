@@ -1,6 +1,5 @@
 .heading-container {
   margin: auto;
-  /* max-width: 640px; */
   font-family: sans-serif;
 }
 
@@ -41,25 +40,6 @@
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
-}
-
-
-
-.nav-link-item-left {
-  /* padding-right: 2rem;
-  float: left; */
-}
-
-.nav-link-item-middle {
-  /* padding-right: 2rem;
-  margin-left: 50%;
-  float: right; */
-}
-
-
-
-.nav-link-text {
-  /* color: black; */
 }
 
 .site-title {

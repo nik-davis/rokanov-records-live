@@ -15,11 +15,7 @@ import {
   navLinks,
   navLinkItem,
   navLinkItemLink,
-  navLinkItemLeft,
-  navLinkItemMiddle,
   navLinkItemRight,
-  navLinkText,
-  siteTitle,
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
