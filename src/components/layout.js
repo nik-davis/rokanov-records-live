@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
-  headingContainer,
+  navContainer,
   heading,
   contentContainer,
   navLinks,
@@ -30,8 +30,7 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div>
-      <nav className={headingContainer}>
+    <div className={navContainer} >
         <ul className={navLinks}>
           {/* Left Side */}
           <li className={navLinkItem}>
@@ -96,7 +95,6 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
         </ul>
-      </nav>
       <main className={contentContainer}>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
