@@ -30,8 +30,8 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div className={headingContainer}>
-      <nav>
+    <div>
+      <nav className={headingContainer}>
         <ul className={navLinks}>
           {/* Left Side */}
           <li className={navLinkItem}>
@@ -97,12 +97,10 @@ const Layout = ({ pageTitle, children }) => {
           </li>
         </ul>
       </nav>
-      <div className={contentContainer}>
-        <main className={contentContainer}>
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
-        </main>
-      </div>
+      <main className={contentContainer}>
+        <h1 className={heading}>{pageTitle}</h1>
+        {children}
+      </main>
     </div>
   );
 };

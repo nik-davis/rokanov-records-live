@@ -1,16 +1,5 @@
-.heading-container {
+.nav-container {
   margin: auto;
-  font-family: sans-serif;
-}
-
-.heading {
-  color: rebeccapurple;
-  max-width: 640px;
-}
-
-.content-container {
-  margin: auto;
-  max-width: 640px;
   font-family: sans-serif;
 }
 
@@ -42,9 +31,13 @@
   text-decoration: none;
 }
 
-.site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
+
+.content-container {
+  margin: auto;
+  max-width: 640px;
+  font-family: sans-serif;
+}
+.heading {
+  color: rebeccapurple;
+  max-width: 640px;
 }
