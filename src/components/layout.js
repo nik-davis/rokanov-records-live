@@ -9,10 +9,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
-  container,
+  headingContainer,
   heading,
+  contentContainer,
   navLinks,
-  navLinkItem,
+  navLinkItemLeft,
+  navLinkItemRight,
   navLinkText,
   siteTitle,
 } from "./layout.module.css";
@@ -29,56 +31,57 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+    <div className={headingContainer}>
       <nav>
         <ul className={navLinks}>
-          <li className={navLinkItem}>
+          <li className={navLinkItemLeft}>
             <Link to="/" className={navLinkText}>
-              Home
+              {data.site.siteMetadata.title}
             </Link>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemLeft}>
             <Link to="/artists" className={navLinkText}>
               Artists
             </Link>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemLeft}>
             <Link to="/blog" className={navLinkText}>
               Blog
             </Link>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemLeft}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemRight}>
             <a href="https://www.instagram.com/rokanovrecordslive/">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemRight}>
             <a href="https://twitter.com/RokanovRecordsL">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemRight}>
             <a href="https://www.facebook.com/RokanovRecordsLive/">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemRight}>
             <a href="mailto:nik@rokanovrecordslive.uk">
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </li>
         </ul>
       </nav>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
-        {children}
-      </main>
+      <div className={contentContainer}>
+        <main className={contentContainer}>
+          <h1 className={heading}>{pageTitle}</h1>
+          {children}
+        </main>
+      </div>
     </div>
   );
 };
