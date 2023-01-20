@@ -14,6 +14,7 @@ import {
   contentContainer,
   navLinks,
   navLinkItem,
+  navLinkItemLink,
   navLinkItemLeft,
   navLinkItemMiddle,
   navLinkItemRight,
@@ -36,57 +37,67 @@ const Layout = ({ pageTitle, children }) => {
     <div className={headingContainer}>
       <nav>
         <ul className={navLinks}>
+          {/* Left Side */}
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/" className={navLinkItemLink}>
               {data.site.siteMetadata.title}
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/artists" className={navLinkItem}>
+            <Link to="/artists" className={navLinkItemLink}>
               Artists
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkItem}>
+            <Link to="/blog" className={navLinkItemLink}>
               Blog
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkItem}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
+          {/* Right Side */}
+          <li className={navLinkItemRight}>
             <a
-              href="https://www.instagram.com/rokanovrecordslive/"
-              className={navLinkItem}
+              href="mailto:nik@rokanovrecordslive.uk"
+              className={navLinkItemLink}
               target="_blank"
+              rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </li>
-          <li className={navLinkItem}>
-            <a
-              href="https://twitter.com/RokanovRecordsL"
-              className={navLinkItem}
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-          </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemRight}>
             <a
               href="https://www.facebook.com/RokanovRecordsLive/"
-              className={navLinkItem}
+              className={navLinkItemLink}
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li className={navLinkItem}>
-            <a href="mailto:nik@rokanovrecordslive.uk" className={navLinkItem} target="_blank" >
-              <FontAwesomeIcon icon={faEnvelope} />
+          <li className={navLinkItemRight}>
+            <a
+              href="https://twitter.com/RokanovRecordsL"
+              className={navLinkItemLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
+          </li>
+          <li className={navLinkItemRight}>
+            <a
+              href="https://www.instagram.com/rokanovrecordslive/"
+              className={navLinkItemLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+          <li className={navLinkItemRight}>
+            <Link to="/about" className={navLinkItemLink}>
+              About
+            </Link>
           </li>
         </ul>
       </nav>
